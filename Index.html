@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Education For All Schools — Teacher Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16213E;
+    --indigo:#1F3A5F;
+    --paper:#EEF2F6;
+    --card:#FFFFFF;
+    --gold:#A9812F;
+    --gold-soft:#F4E8CE;
+    --teal:#2F6F62;
+    --teal-soft:#DCEDE9;
+    --line:#D6DEE8;
+    --muted:#5B6B85;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;}
+  .page{max-width:920px;margin:0 auto;padding:52px 24px 80px;}
+
+  .hero{padding:8px 4px 36px;border-bottom:1px solid var(--line);margin-bottom:36px;}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;color:var(--teal);background:var(--teal-soft);padding:6px 12px;border-radius:20px;font-weight:600;}
+  .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--teal);display:inline-block;}
+  h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(30px,5vw,44px);margin:18px 0 10px;letter-spacing:-.01em;}
+  .lede{max-width:560px;color:var(--muted);font-size:15.5px;line-height:1.6;margin:0;}
+
+  .school-list{display:flex;flex-direction:column;gap:16px;}
+
+  .school-row{display:flex;align-items:center;gap:18px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px;transition:box-shadow .15s, transform .15s;}
+  .school-row:hover{box-shadow:0 8px 24px rgba(22,33,62,.08);transform:translateY(-2px);}
+
+  .badge{flex:0 0 auto;width:46px;height:46px;border-radius:12px;background:var(--gold-soft);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:700;font-size:18px;color:var(--gold);}
+
+  .school-info{flex:1;min-width:0;}
+  .school-info .name{font-family:'Fraunces',serif;font-size:19px;font-weight:600;margin:0 0 3px;color:var(--ink);}
+  .school-info .region{font-size:13px;color:var(--muted);font-family:'IBM Plex Mono',monospace;letter-spacing:.03em;}
+
+  .school-actions{display:flex;gap:10px;flex:0 0 auto;flex-wrap:wrap;}
+
+  .btn-enter, .btn-download{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:600;padding:11px 16px;border-radius:10px;text-decoration:none;white-space:nowrap;border:1px solid transparent;transition:opacity .15s;}
+  .btn-enter{background:var(--indigo);color:#fff;}
+  .btn-enter:hover{opacity:.88;}
+  .btn-download{background:var(--teal-soft);color:var(--teal);border-color:#BFDDD6;}
+  .btn-download:hover{opacity:.8;}
+
+  footer{margin-top:44px;text-align:center;color:var(--muted);font-size:12.5px;}
+
+  @media (max-width:600px){
+    .school-row{flex-wrap:wrap;}
+    .school-actions{width:100%;padding-left:64px;}
+  }
+
+  :focus-visible{outline:2px solid var(--indigo);outline-offset:2px;}
+  @media (prefers-reduced-motion: reduce){ *{transition:none !important;} }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="hero">
+    <span class="eyebrow">Teacher portal · no login required</span>
+    <h1>Education For All Schools</h1>
+    <p class="lede">Choose your school below to enter results, or download the latest result sheet.</p>
+  </header>
+
+  <div class="school-list">
+
+    <div class="school-row">
+      <div class="badge">A</div>
+      <div class="school-info">
+        <p class="name">Athena Secondary School</p>
+        <span class="region">Enter results or download the latest sheet</span>
+      </div>
+      <div class="school-actions">
+        <a class="btn-enter" href="https://example.org/enter/athena" target="_blank" rel="noopener noreferrer">Enter results ↗</a>
+        <a class="btn-download" href="https://example.org/download/athena.pdf" download>Download ⬇</a>
+      </div>
+    </div>
+
+    <div class="school-row">
+      <div class="badge">R</div>
+      <div class="school-info">
+        <p class="name">Rosemarie Girls Secondary School</p>
+        <span class="region">Enter results or download the latest sheet</span>
+      </div>
+      <div class="school-actions">
+        <a class="btn-enter" href="https://example.org/enter/rosemarie" target="_blank" rel="noopener noreferrer">Enter results ↗</a>
+        <a class="btn-download" href="https://example.org/download/rosemarie.pdf" download>Download ⬇</a>
+      </div>
+    </div>
+
+    <div class="school-row">
+      <div class="badge">M</div>
+      <div class="school-info">
+        <p class="name">Mount Ararat Girls Secondary School</p>
+        <span class="region">Enter results or download the latest sheet</span>
+      </div>
+      <div class="school-actions">
+        <a class="btn-enter" href="https://example.org/enter/mount-ararat" target="_blank" rel="noopener noreferrer">Enter results ↗</a>
+        <a class="btn-download" href="https://example.org/download/mount-ararat.pdf" download>Download ⬇</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>Education For All Schools — built for teachers.</footer>
+</div>
+</body>
+</html>
